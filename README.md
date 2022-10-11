@@ -8,8 +8,8 @@
   
   
 + About the code 'driver.py': (you should modify the variables)  
-    + target = <Target-IP>
-    + port = <Target-port>
+    + target = Target-IP address
+    + port = Target-port
     + session_count = 1 #how many connections do you want for this senario
     + uri = "upload"   #Address for uploading your content 
     + content_len = 5000000   #you should tell the target how much is your overall data 
